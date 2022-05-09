@@ -1,0 +1,191 @@
+
+@import url(./contact.css);
+@import url(./tarjeta.css);
+@import url(./dasboar.css);
+:root {
+    scroll-behavior: smooth;
+    --primary-theme-color: #03718d;
+    --secondary-theme-color: #027252;
+    --text-color: #fff;
+  
+    --button-color: #038d2a;
+    --button-color-active: #2a9d8f;
+    --button-text-color: rgb(22, 19, 19);
+  
+    --primary-shadow-color: rgba(166, 165, 165, 0.533);
+    --secondary-shadow-color: #888b9480;
+    --primary-highlight-color: #61dafb;
+    --secondary-highlight-color: #ffd700;
+    --invalid-color: #dc143c;
+    --padding-section: 4rem 0;
+    --padding-container: 0 2rem;
+    --max-width-container: 1024px;
+    --border-radius: 0.5rem;
+    --all-transitions: all 0.25s;
+  }
+
+
+  
+.nacionales {
+    position: relative;
+    background-size: cover;
+    min-height: 100vh;
+    padding: var(--padding-section);
+    box-sizing: border-box;
+  }
+  
+  .nacionales::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2.5rem;
+    background-image: linear-gradient(var(--primary-theme-color), transparent);
+  }
+  
+  .nacionales__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    max-width: var(--max-width-container);
+    margin: auto;
+    padding: var(--padding-container);
+  }
+  
+  .nacionales__title {
+    margin: 0;
+  }
+  
+  .nacionales__buscador {
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 0 0.125rem var(--primary-shadow-color), 0 0 0 0.25rem var(--primary-shadow-color);
+    /* background-color: transparent; */
+    padding: 0.75rem;
+    transition: var(--all-transitions);
+  }
+  
+  .nacionales__buscador:hover {
+    box-shadow:
+      0 0 0 0.25rem var(--primary-highlight-color),
+      0 0 0.5rem 0 var(--secondary-highlight-color),
+      0 0 0.75rem 0 var(--secondary-highlight-color);
+  }
+  
+  .nacionales__meme-container {
+    display: grid;
+    gap: 2rem;
+  }
+  
+  .nacionales__meme {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: var(--secondary-shadow-color);
+    border-radius: var(--border-radius);
+    box-shadow:
+      0 0 0 0.125rem var(--primary-shadow-color),
+      0 0 0 0.25rem var(--primary-shadow-color);
+    overflow: hidden;
+    transition: var(--all-transitions);
+  }
+  
+  .nacionales__meme-image-container {
+    display: flex;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  .nacionales__meme-image {
+    width: 100%;
+    transition: var(--all-transitions);
+  }
+  
+  .nacionales__meme-image:hover {
+    transform: scale(1.15);
+  }
+  
+  .nacionales__meme-title {
+    font-size: 2rem;
+    text-align: center;
+    padding: 0 1rem;
+    margin: 0;
+  }
+  
+  .nacionales__meme-button {
+    align-self: center;
+    background-color: var(--button-color);
+    border-radius: var(--border-radius);
+    color: var(--button-text-color);
+    text-shadow: 0 0 0.125rem var(--primary-highlight-color);
+    font-weight: 700;
+    margin-top: auto;
+    margin-bottom: 1rem;
+    padding: 0.5em 1.5em;
+    text-decoration: none;
+    transition: var(--all-transitions);
+  }
+  
+  .nacionales__meme-button:hover {
+    background-color: var(--button-color-active);
+  }
+  
+  
+
+
+  .dashboards {
+    padding: var(--padding-section);
+  }
+  
+  .dashboards__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    max-width: var(--max-width-container);
+    margin: auto;
+    padding: var(--padding-container);
+  }
+  
+  .dashboards__title {
+    font-size: 2rem;
+    text-shadow: 0 0 0.25rem var(--primary-highlight-color);
+    margin: 0;
+  }
+  
+  .dashboard-models {
+    background-color: var(--secondary-highlight-color);
+    border-radius: var(--border-radius);
+  }
+  
+  .dashboard-models__container {
+    padding: 1rem;
+  }
+  
+  .dashboard-models__title {
+    font-size: 1.5rem;
+    text-align: center;
+    text-shadow: 0 0 0.25rem var(--primary-highlight-color);
+    margin: 0;
+  }
+  
+  .dashboard-models__chart {
+    width: 100%;
+  }
+
+
+
+
+
+
+@media (min-width: 854px) {
+    :root {
+      --padding-container: 0 0.75em;
+    }
+
+    .nacionales__meme-container {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
